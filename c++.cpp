@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <iostram>
 using namespace std;
 //define
 #define int long long
@@ -26,17 +25,21 @@ using namespace std;
 #define EQ(a,b) (abs((a)-(b)) < EPS)
 // 2つのベクトルが等しいかどうか
 #define EQV(a,b) ( EQ((a).real(), (b).real()) && EQ((a).imag(), (b).imag()) )
-
 //template
 template <typename T, typename U>
 ostream &operator<<(ostream &os, const pair<T, U> &p){
-  os << p.first << " " << p.second;return os;
+  os << "(" << p.first << "," << p.second << ")";return os;
 }
 template <typename T>
 ostream &operator<<(ostream &os, const vector<T> &v){
   for (auto it = v.begin();it != v.end();++it){
-    if (it != v.begin())os << " ";os << *it;
-  }return os;
+    if(it != v.begin()){os << " ";}os << *it;
+      }return os;
+}
+template <typename T, typename U>
+ostream &operator<<(ostream &os, const map<T, U> &mp){
+  for(auto x: mp)os << "(" << x.first << "," << x.second << ")" << endl;
+  return os;
 }
 template<typename T, int SIZE>
 int array_length(const T (&)[SIZE]){return SIZE;}
@@ -62,10 +65,13 @@ const int INF = 1e18+7;
 
 
 
+
 signed main(){
-	
+  
 	return 0;
 }
+
+
 
 
 

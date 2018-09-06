@@ -99,42 +99,24 @@ string struct_to_date(int y, int m, int d){
 	return int_to_date(struct_to_int(y, m, d));
 }
 
-
-#include <bits/stdc++.h>
-using namespace std;
-#define int long long
-#define UNIQUE(v) v.erase(unique(all(v)), v.end());
-#define ZIP(v) sort(all(v)),UNIQUE(v)
-#define ADD(a, b) a = (a + b) % mod
-#define SUB(a, b) a = (a+mod-b)%mod
-#define MUL(a, b) a = (a * b) % mod
-#define repi(i,m,n) for(int i = m;i < n;i++)
-#define drep(i,n,m) for(int i = n;i >= m;i--)
-#define rep(i,n) repi(i,0,n)
-#define rrep(i,n) repi(i,1,n+1)
-#define chmin(x,y) x = min(x,y)
-#define chmax(x,y) x = max(x,y)
-#define all(v) v.begin(),v.end()
-#define rall(v) v.rbegin(), v.rend()
-#define dmp(x,y) make_pair(x,y)
-#define pb(x) push_back(x)
-#define fi first
-#define se second
-typedef pair<int,int> P;
-typedef pair<int, P> PP;
-typedef vector<int> vi;
-const int inf = 1e9+7;
-const int INF = 1e18+7;
-/*chrono::system_clock::time_point  start;
-void timerstart(){start = chrono::system_clock::now();}
-void timerstop(){
-	auto end = chrono::system_clock::now();
-	int elapsed = chrono::duration_cast<chrono::milliseconds>(end-start).count();
-	printf("%d[ms]\n", elapsed);
-}*/
-
-signed main(){
-	
-	return 0;
+//リストの使い方
+list<int> lst(n, value);   //要素数n全ての要素の値valueで初期化
+for(auto it = lst.begin(); it != lst.end();++it) {  //全要素アクセス
+  cout << *it << endl;
 }
+for(auto x: lst)cout << x << endl;
+lst.push_front(value);
+lst.push_back(value);
+lst.pop_front();
+lst.pop_back();
+lst.front();
+lst.last();
+lst.clear();
+it = lst.insert(it, value);  //itの前にvalueを挿入し挿入したitを返す
+it = lst.erase(it);   //要素を削除しitは次の要素を指す
+lst.sort();
+lst.empty()
+
+
+
 
