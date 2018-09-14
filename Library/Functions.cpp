@@ -1,3 +1,12 @@
+template <typename T>
+using V = vector<T>;
+template <typename T, typename U>
+using P = pair<T, U>;
+template <typename T>
+using PQ = priority_queue<T>;
+template <typename T>
+using GPQ = priority_queue<T, vector<T>, greater<T>>;
+
 //二次元グリッド表示
 rep(y,h){
   rep(x,w)printf("%lld ", a[y][x]);

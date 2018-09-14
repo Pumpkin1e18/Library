@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-//define
+// define
 #define int long long
 #define UNIQUE(v) v.erase(unique(all(v)), v.end());
 #define ZIP(v) sort(all(v)),UNIQUE(v)
@@ -17,15 +17,10 @@ using namespace std;
 #define rall(v) v.rbegin(), v.rend()
 #define dmp(x,y) make_pair(x,y)
 #define pb(x) push_back(x)
+#define pf(x) push_front(x)
 #define fi first
 #define se second
-// 許容する誤差ε
-#define EPS (1e-10)
-// 2つのスカラーが等しいかどうか
-#define EQ(a,b) (abs((a)-(b)) < EPS)
-// 2つのベクトルが等しいかどうか
-#define EQV(a,b) ( EQ((a).real(), (b).real()) && EQ((a).imag(), (b).imag()) )
-//template
+// debug
 template <typename T, typename U>
 ostream &operator<<(ostream &os, const pair<T, U> &p){
   os << "(" << p.first << "," << p.second << ")";return os;
@@ -33,7 +28,7 @@ ostream &operator<<(ostream &os, const pair<T, U> &p){
 template <typename T>
 ostream &operator<<(ostream &os, const vector<T> &v){
   for (auto it = v.begin();it != v.end();++it){
-    if(it != v.begin()){os << " ";}os << *it;
+    if(it != v.begin())os << " ";os << *it;
       }return os;
 }
 template <typename T, typename U>
@@ -44,16 +39,16 @@ ostream &operator<<(ostream &os, const map<T, U> &mp){
 template<typename T, int SIZE>
 int array_length(const T (&)[SIZE]){return SIZE;}
 template<typename T, int N>
-void print(const T (&a)[N], int s = N, int t = -1, bool f = true){
+void PRINTF(const T (&a)[N], int s = N, int t = -1, bool f = true){
 	if(t == -1){rep(i,s){if(i)cout << " ";cout << a[i];}}
 	else repi(i,s,t){if(i!=s)cout << " ";cout << a[i];}
 	if(f)cout << "\n";
 }
 template<typename T, int N1, int N2>
-void print(const T (&a)[N1][N2], int h = N1, int w = N2){
+void PRINTF(const T (&a)[N1][N2], int h = N1, int w = N2){
 	rep(i,h){rep(j,w){cout << a[i][j] << " \n"[j==w-1];}}
 }
-//typedef
+// typedef
 typedef complex<double> Point;
 typedef pair<int,int> P;
 typedef pair<int, P> PP;
@@ -66,11 +61,11 @@ const int INF = 1e18+7;
 
 
 
+
 signed main(){
   
 	return 0;
 }
-
 
 
 

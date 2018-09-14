@@ -1,7 +1,7 @@
 # Library
 僕が普段競プロで使ってるライブラリ集です
 
-## ファルダの説明
+## ファイルの説明
 - **Library**
   - Arithmetic.cpp・・・加減乗除のライブラリ
   - Bipartite_Matching.cpp・・・二部マッチング

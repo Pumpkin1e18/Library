@@ -4,6 +4,7 @@ const int INF = 1e18+7;
 
 //四則演算
 //init()とsolve()呼ぶだけ
+//空白や=はあってはいけない
 class Arithmetic{
 public:
 	string str;
@@ -12,6 +13,7 @@ public:
 	int add(int a, int b){return a+b;}
 	int mul(int a, int b){return a*b;}
 	int div(int a, int b){return a/b;}
+  int sur(int a, int b){return a%b;}
 	
 	P get_num(int p){
 		int ans = 0, q = -1, f = 0;
@@ -32,10 +34,11 @@ public:
 		repi(i,p,n){
 			if(f and str[i] == ')')return P(ans, i-1);
 			if(str[i] == ')')return P(ans, i);
-			if(str[i] == '*' or str[i] == '/'){
+			if(str[i] == '*' or str[i] == '/' or str[i] == '%'){
 				pi = get_num(i+1);
 				if(str[i] == '*')ans = mul(ans, pi.fi);
 				if(str[i] == '/')ans = div(ans, pi.fi);
+        if(str[i] == '%')ans = sur(ans, pi.fi);
 			}
 			if(str[i] == '+' or str[i] == '-'){
 				if(f)return P(ans, i-1);
