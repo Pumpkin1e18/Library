@@ -1,3 +1,4 @@
+/*TopologicalSort.cpp*/
 #define pb(x) push_back(x)
 #define all(v) v.begin(),v.end()
 
@@ -50,4 +51,3 @@ public:
 		return ans.size() == n;		//できなかった場合falseが返る
 	}
 };
-

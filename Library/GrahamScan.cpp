@@ -1,3 +1,4 @@
+/*GrahamScan.cpp*/
 // 許容する誤差ε
 #define EPS (1e-10)
 // 2つのスカラーが等しいかどうか
@@ -7,7 +8,7 @@
 typedef complex<double> Point;
 
 
-
+//凸包
 double dot(Point a, Point b) {
   return (a.real() * b.real() + a.imag() * b.imag());
 }

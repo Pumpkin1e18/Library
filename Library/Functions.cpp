@@ -1,3 +1,4 @@
+/*Functions.cpp*/
 template <typename T>
 using V = vector<T>;
 template <typename T, typename U>
@@ -125,7 +126,3 @@ it = lst.insert(it, value);  //itの前にvalueを挿入し挿入したitを返�
 it = lst.erase(it);   //要素を削除しitは次の要素を指す
 lst.sort();
 lst.empty()
-
-
-
-

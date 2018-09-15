@@ -1,3 +1,4 @@
+/*FermatCombination.cpp*/
 #define int long long
 const int mod = 1e9+7;
 
@@ -61,7 +62,3 @@ int COM(int n, int k){
     if (n < 0 || k < 0) return 0;
     return fac[n]*(finv[k]*finv[n-k]%mod)%mod;
 }
-
-
-
-

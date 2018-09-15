@@ -1,3 +1,4 @@
+/*BIT.cpp*/
 #define all(v) v.begin(),v.end()
 
 // 0に対応できるよう内部でindexを1ずらしてる
@@ -27,4 +28,3 @@ public:
 		return ub;
 	}
 };
-

@@ -1,3 +1,4 @@
+/*LazySegmentTree.cpp*/
 const int INF = 1e18+7;
 #define repi(i,m,n) for(int i = m;i < n;i++)
 #define rep(i,n) repi(i,0,n)
@@ -98,5 +99,3 @@ public:
 	int get_min(int a, int b){return calc(a, b, 0, 0, n, 1);}
 	int get_sum(int a, int b){return calc(a, b, 0, 0, n, 2);}
 };
-
-

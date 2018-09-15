@@ -1,3 +1,4 @@
+/*LowLink.cpp*/
 #define repi(i,m,n) for(int i = m;i < n;i++)
 #define rep(i,n) repi(i,0,n)
 #define chmin(x,y) x = min(x,y)
@@ -5,6 +6,7 @@
 #define all(v) v.begin(),v.end()
 #define pb(x) push_back(x)
 
+//橋検出
 class LowLink{
 public:
 	int n, cnt1;
@@ -47,7 +49,3 @@ public:
 		return k;
 	}
 };
-
-
-
-

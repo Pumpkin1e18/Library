@@ -1,5 +1,3 @@
-
-
 //宣言Box<型> box;
 //表示 cout << box;
 template <typename T>class Box;

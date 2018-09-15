@@ -1,3 +1,4 @@
+/*SegmentTree.cpp*/
 const int INF = 1e18+7;
 #define all(v) v.begin(),v.end()
 #define repi(i,m,n) for(int i = m;i < n;i++)
@@ -49,6 +50,3 @@ public:
 	int get_max(int a, int b){return calc(a, b, 0, 0, n, 0).fi;}
 	int get_min(int a, int b){return calc(a, b, 0, 0, n, 1).fi;}
 };
-
-
-

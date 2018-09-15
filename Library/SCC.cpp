@@ -1,3 +1,4 @@
+/*SCC.cpp*/
 #define UNIQUE(v) v.erase(unique(all(v)), v.end());
 #define ZIP(v) sort(all(v)),UNIQUE(v)
 #define repi(i,m,n) for(int i = m;i < n;i++)
@@ -47,6 +48,3 @@ public:
 		return k;
 	}
 };
-
-
-
