@@ -39,6 +39,20 @@ int Pow(int x, int n){
   return ans;
 }
 
+// 素因数分解する 
+// たとえば 60 = 2^2 x 3 x 5 だったら {(2, 2), (3, 1), (5, 1)} を返す
+vector<pair<int, int>> prime_factorize(int n) {
+    vector<pair<int, int>> res;
+    for (int p = 2; p*p <= n; ++p) {
+        if (n%p != 0) continue;
+        int num = 0;
+        while (n%p == 0) { num++; n /= p; }
+        res.push_back(make_pair(p, num));
+    }
+    if (n != 1) res.push_back(make_pair(n, 1));
+    return res;
+}
+
 //時計回り90度回転
 void rotate(){
   rep(i,h)rep(j,w){tmp[i][j] = a[h-1-j][i];}
@@ -108,6 +122,35 @@ int struct_to_int(int y, int m, int d){
 string struct_to_date(int y, int m, int d){
 	return int_to_date(struct_to_int(y, m, d));
 }
+
+// 乱数生成
+// https://qiita.com/drken/items/7c6ff2aa4d8fce1c9361
+unsigned int randInt() {
+    static unsigned int tx = 123456789, ty=362436069, tz=521288629, tw=88675123;
+    unsigned int tt = (tx^(tx<<11));
+    tx = ty; ty = tz; tz = tw;
+    return ( tw=(tw^(tw>>19))^(tt^(tt>>8)) );
+}
+
+
+// ファイル操作
+#define DEBUG
+
+#ifdef DEBUG
+ifstream fin("in.txt");
+fin >> n;
+#else
+
+#endif
+
+#ifdef DEBUG
+ofstream fout("out.txt");
+fout << n << endl;
+printf("success\n");
+#else
+
+#endif
+
 
 //リストの使い方
 list<int> lst(n, value);   //要素数n全ての要素の値valueで初期化
