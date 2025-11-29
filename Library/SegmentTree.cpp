@@ -29,7 +29,7 @@ public:
 		if(x.fi == y.fi)return x.se < y.se ? x : y;
 		return max(x, y);
 	}
-	void update(int k, int x, bool flag=false){		//kの値をxに変更
+	void update(int k, int x, bool flag=false){		//kの値をxに変更, flag==trueの時は値を消す
 		k += n-1;
 		seg[0][k] = seg[1][k] = P(x, k-(n-1));
 		if(flag){seg[0][k] = P(-INF, -1);seg[1][k] = P(INF, -1);}
@@ -46,7 +46,7 @@ public:
 		P vr = calc(a, b, k*2+2, (l+r)/2, r, f);
 		return f ? cmp_min(vl, vr) : cmp_max(vl, vr);
 	}
-	void erase(int k){update(k, -1, true);}
-	int get_max(int a, int b){return calc(a, b, 0, 0, n, 0).fi;}
-	int get_min(int a, int b){return calc(a, b, 0, 0, n, 1).fi;}
+	void erase(int k){update(k, -1, true);}    // 値を消す
+	int get_max(int a, int b){return calc(a, b, 0, 0, n, 0).fi;}   // [a, b)
+	int get_min(int a, int b){return calc(a, b, 0, 0, n, 1).fi;}   // [a, b)
 };
