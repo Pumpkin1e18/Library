@@ -5,26 +5,29 @@
 #define pb(x) push_back(x)
 
 //二部マッチング
-class Bipartite_Matching{
+class BipartiteMatching {
 public:
-	vector<vector<int> > G;
+	vector<vector<int>> G;
 	vector<int> match;
 	vector<bool> used;
 	int n;
-	void init(int N){
-		n = N;
+
+	void init(int n_) {
+		n = n_;
 		G.resize(n);
 		match.resize(n);
 		used.resize(n);
 	}
-	void add_edge(int u, int v){
-		G[u].pb(v);G[v].pb(u);
+
+	void add_edge(int u, int v) {
+		G[u].pb(v); G[v].pb(u);
 	}
-	bool dfs(int v){
+
+	bool dfs(int v) {
 		used[v] = true;
-		rep(i,G[v].size()){
-			int u = G[v][i], w = match[u];
-			if(w < 0 || (!used[w] && dfs(w))){
+        for (int u : G[v]) {
+			int w = match[u];
+			if(w < 0 || !used[w] && dfs(w)) {
 				match[v] = u;
 				match[u] = v;
 				return true;
@@ -32,12 +35,13 @@ public:
 		}
 		return false;
 	}
-	int bipartite_matching(){
+
+	int bipartite_matching() {
 		int res = 0;
 		fill(all(match), -1);
-		rep(i,n)if(match[i] < 0){
+		rep(i,n) if(match[i] < 0) {
 			fill(all(used), 0);
-			if(dfs(i))res++;
+			if(dfs(i)) res++;
 		}
 		return res;
 	}
